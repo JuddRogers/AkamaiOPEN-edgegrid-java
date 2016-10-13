@@ -1,0 +1,8 @@
+mvn source:jar && \
+mvn deploy:deploy-file -Durl=https://repo.bazaarvoice.com/nexus/content/repositories/thirdparty/ \
+                       -DrepositoryId=bazaarvoice \
+                       -Dfile=target/auth-1.0.0.jar \
+                       -DpomFile=pom.xml     \
+                       -Dsources=target/auth-1.0.0-sources.jar \
+                       -Dpackaging=jar       \
+                       -DgeneratePom=true
